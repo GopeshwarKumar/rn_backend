@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
- mongoose.connect("mongodb://localhost:27017/RNAuditionBase");
+mongoose.connect("mongodb+srv://gopeshwarkumark:gopeshwar23ce8004@cluster0.pecwn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/RN").then(() => {
+  console.log("databse connected successfull y:")
+}).catch((e) => {
+  console.log(e);
+})
 
 const schema = new mongoose.Schema({
   first: { type: String},   // First Name
